@@ -8,7 +8,7 @@ import SwiftUI
 import AVFoundation
  import UIKit
 
-
+#if os(iOS)
 @available(iOS 17.0, *)
 class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var capturedImage: UIImage?
@@ -82,3 +82,4 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         resetCamera()
     }
 }
+#endif

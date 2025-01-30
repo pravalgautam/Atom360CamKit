@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
  import UIKit
 
-
+#if os(iOS)
 @available(iOS 17.0, *)
 public struct CameraView: View {
     @StateObject private var cameraModel = CameraModel()
@@ -113,3 +113,4 @@ struct CameraPreview: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
+#endif
