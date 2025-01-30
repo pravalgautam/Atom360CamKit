@@ -41,6 +41,7 @@ public struct CameraView: View {
                         cameraModel.capturePhoto()
                     })
                 }
+                Spacer()
             }
             .padding(.bottom, 50)
         }
@@ -75,7 +76,7 @@ struct ConfirmationPopup: View {
             Image(uiImage: image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 250, height: 250)
+                .frame(width: 300, height: 300)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
 
             HStack {
@@ -91,8 +92,9 @@ struct ConfirmationPopup: View {
                         .foregroundColor(.green)
                 }
             }
+            
         }
-        .background(Color.black.opacity(0.8))
+        .background(Color.white.opacity(0.8))
         .cornerRadius(20)
         .padding()
     }
