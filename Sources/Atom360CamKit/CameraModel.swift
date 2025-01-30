@@ -6,10 +6,10 @@
 //
 import SwiftUI
 import AVFoundation
-@preconcurrency import UIKit
+ import UIKit
 
 
-@available(iOS 13.0, *)
+@available(iOS 17.0, *)
 class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var capturedImage: UIImage?
     

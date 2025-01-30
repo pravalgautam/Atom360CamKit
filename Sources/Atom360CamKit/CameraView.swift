@@ -7,9 +7,10 @@
 
 import SwiftUI
 import AVFoundation
-@preconcurrency import UIKit
+ import UIKit
 
 
+@available(iOS 17.0, *)
 public struct CameraView: View {
     @StateObject private var cameraModel = CameraModel()
     
@@ -48,7 +49,7 @@ public struct CameraView: View {
         }
     }
 }
-
+@available(iOS 17.0, *)
 struct CaptureButton: View {
     let action: () -> Void
 
@@ -63,7 +64,7 @@ struct CaptureButton: View {
         }
     }
 }
-
+@available(iOS 17.0, *)
 struct ConfirmationPopup: View {
     let image: UIImage
     let onSave: () -> Void
