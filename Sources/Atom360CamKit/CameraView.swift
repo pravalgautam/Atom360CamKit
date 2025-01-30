@@ -41,7 +41,6 @@ public struct CameraView: View {
                         cameraModel.capturePhoto()
                     })
                 }
-                Spacer()
             }
             .padding(.bottom, 50)
         }
@@ -75,7 +74,7 @@ struct ConfirmationPopup: View {
         VStack {
             Image(uiImage: image)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: 300, height: 300)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
 
